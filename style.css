@@ -1266,14 +1266,33 @@ ul { list-style: none; }
   .hamburger { display: flex; }
   .btn--header { display: none; }
 
-  /* 슬로건: 상단 정렬 → 텍스트가 상반부, 화살표가 하반부에 위치 */
-  .hero__overlay {
-    justify-content: flex-start;
-    padding: 120px 20px 60px;
+  /* 모바일 히어로: 상단(다크배경+텍스트) / 하단(이미지캐러셀) 분리 */
+  .hero__media-wrap {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
   }
-  .hero__media-wrap, .carousel { min-height: 100vh; }
 
-  /* 플로팅 카드: 모바일에서 화면 복잡도 줄이기 */
+  /* 텍스트 블록: 다크 배경, 캐러셀 위로 reorder */
+  .hero__overlay {
+    order: -1;
+    position: relative;
+    inset: auto;
+    background: linear-gradient(160deg, #001d40 0%, #0d0d28 50%, #1c0009 100%);
+    padding: 88px 24px 48px;
+    justify-content: center;
+    pointer-events: auto;
+    z-index: 1;
+  }
+
+  /* 이미지 캐러셀: 고정 높이, 텍스트 없이 순수 이미지 */
+  .carousel {
+    min-height: 0;
+    height: 56vw;
+    order: 0;
+    flex-shrink: 0;
+  }
+
   .hero__float { display: none; }
 
   .reviews__grid { grid-template-columns: repeat(2, 1fr); }
@@ -1290,18 +1309,17 @@ ul { list-style: none; }
   .programs__grid { grid-template-columns: 1fr; }
   .about__grid { grid-template-columns: 1fr; }
   .reviews__grid { grid-template-columns: 1fr; }
-  .hero__media-wrap, .carousel { min-height: 100svh; }
 
-  /* 소형 모바일: 패딩 및 텍스트 최적화 */
-  .hero__overlay { padding: 100px 16px 60px; }
+  /* 소형 모바일: 텍스트 크기 조정 */
+  .hero__overlay { padding: 84px 16px 40px; }
   .hero__eyebrow { font-size: 11px; margin-bottom: 10px; }
   .hero__title { font-size: clamp(22px, 7vw, 32px); margin-bottom: 10px; }
-  .hero__desc { font-size: 13px; margin-bottom: 16px; }
-  .hero__badges { margin-bottom: 18px; }
+  .hero__desc { font-size: 13px; margin-bottom: 14px; }
+  .hero__badges { gap: 6px; margin-bottom: 18px; }
   .hero__actions .btn { font-size: 14px; padding: 12px 22px; }
 
-  /* 화살표: 텍스트 콘텐츠 아래 영역(65%)에 배치 */
-  .carousel__arrow { top: 65%; width: 36px; height: 36px; }
+  /* 캐러셀 화살표 크기 */
+  .carousel__arrow { width: 36px; height: 36px; }
   .carousel__arrow--prev { left: 8px; }
   .carousel__arrow--next { right: 8px; }
 }
