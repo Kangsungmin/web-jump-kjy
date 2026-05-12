@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>강재영 줄넘기 학교 | 파주 운정 줄넘기 전문 체육관</title>
+  <meta name="description" content="파주 운정 No.1 줄넘기 전문 체육관. 유치부·초등부·중등부·선수부 단계별 맞춤 교육. 줄넘기 1급 지도자, 전국 대회 다수 수상. 031-949-8253" />
+  <meta name="keywords" content="파주 줄넘기, 운정 줄넘기, 줄넘기 학원, 줄넘기 학교, 강재영 줄넘기, 파주 체육관" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="강재영 줄넘기 학교 | 파주 운정 줄넘기 전문 체육관" />
+  <meta property="og:description" content="파주 운정 No.1 줄넘기 전문 체육관. 유치부부터 선수부까지 단계별 맞춤 교육." />
+  <meta property="og:image" content="images/gym-students-banner-1.jpeg" />
+  <meta name="theme-color" content="#E8192C" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        <img src="logo.png" alt="강재영줄넘기학교" class="logo__img" />
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#about">소개</a>
+        <a href="#features">특장점</a>
+        <a href="#programs">프로그램</a>
+        <a href="#coach">코치</a>
+        <a href="#contact">오시는 길</a>
+      </nav>
+      <a href="tel:031-949-8253" class="btn btn--header">📞 031-949-8253</a>
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+
+    <!-- 슬라이드 캐러셀 + 오버레이 -->
+    <div class="hero__media-wrap">
+
+      <div class="carousel" id="carousel">
+        <div class="carousel__track" id="carouselTrack">
+
+          <!-- 슬라이드 1 ~ 5 : 사진 준비 전 플레이스홀더 -->
+          <!-- ★ 사진 교체 방법: 각 slide 안의 .slide__placeholder 를 삭제하고
+               <img src="사진파일명.jpg" alt="설명" /> 으로 교체하세요 -->
+
+          <div class="carousel__slide">
+            <img src="images/gym-students-banner-1.jpeg" alt="강재영 줄넘기 학교 선수들" />
+            <div class="slide__caption">
+              <strong>빠르게! 더 빠르게!</strong>
+              <span>강재영 줄넘기 학교</span>
+            </div>
+          </div>
+
+          <div class="carousel__slide">
+            <img src="images/class-gym-interior.jpeg" alt="체육관 수업 장면" loading="lazy" />
+            <div class="slide__caption">
+              <strong>체계적인 단계별 교육</strong>
+              <span>유치부 · 초등부 · 중등부 · 선수부</span>
+            </div>
+          </div>
+
+          <div class="carousel__slide">
+            <img src="images/competition-gyeonggi-cup-1.jpeg" alt="경기도줄넘기협회장배 대회 참가" loading="lazy" />
+            <div class="slide__caption">
+              <strong>전국 대회 다수 수상</strong>
+              <span>실력으로 증명하는 지도진</span>
+            </div>
+          </div>
+
+          <div class="carousel__slide">
+            <img src="images/event-sports-festival.jpeg" alt="한마음체육대회 참가" loading="lazy" />
+            <div class="slide__caption">
+              <strong>인성 · 예절 · 키 성장 프로그램</strong>
+              <span>몸과 마음이 함께 자라는 교육</span>
+            </div>
+          </div>
+
+          <div class="carousel__slide">
+            <img src="images/competition-korea-open.jpeg" alt="Korea Open 대회 참가 선수들" loading="lazy" />
+            <div class="slide__caption">
+              <strong>스피드 선수반 운영 중</strong>
+              <span>초 · 중등 전문 대회 훈련</span>
+            </div>
+          </div>
+
+        </div><!-- /track -->
+
+        <!-- 화살표 -->
+        <button class="carousel__arrow carousel__arrow--prev" id="prevBtn" aria-label="이전 슬라이드">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+        <button class="carousel__arrow carousel__arrow--next" id="nextBtn" aria-label="다음 슬라이드">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+
+        <!-- 인디케이터 점 -->
+        <div class="carousel__dots" id="carouselDots"></div>
+
+        <!-- 슬라이드 번호 -->
+        <div class="carousel__counter">
+          <span id="currentSlide">1</span> / <span id="totalSlide">5</span>
+        </div>
+
+      </div><!-- /carousel -->
+
+      <!-- 슬로건 오버레이 -->
+      <div class="hero__overlay">
+        <p class="hero__eyebrow">파주 운정 No.1 줄넘기 전문 체육관</p>
+        <h1 class="hero__title">
+          빠르게! 더 빠르게!
+          <span class="hero__title-accent">더더 빠르게!</span>
+        </h1>
+        <p class="hero__desc">
+          아이들이 즐겁게 뛰고, 건강하게 성장하는 곳. 강재영 줄넘기 학교가 함께합니다.
+        </p>
+        <div class="hero__badges">
+          <span class="badge">유치부</span>
+          <span class="badge">초등부</span>
+          <span class="badge">중등부</span>
+          <span class="badge badge--point">선수부</span>
+        </div>
+        <div class="hero__actions">
+          <a href="tel:031-949-8253" class="btn btn--primary">전화 상담하기</a>
+          <a href="#programs" class="btn btn--ghost-light">프로그램 보기</a>
+        </div>
+      </div>
+
+      <!-- 떠있는 정보 카드 -->
+      <div class="hero__float hero__float--left">
+        <span class="float-icon">🏅</span>
+        <div>
+          <strong>대회 수상</strong>
+          <p>전국 대회 다수 입상</p>
+        </div>
+      </div>
+      <div class="hero__float hero__float--right">
+        <span class="float-icon">👨‍🏫</span>
+        <div>
+          <strong>1급 지도자</strong>
+          <p>줄넘기 1급 강사·심판</p>
+        </div>
+      </div>
+
+    </div><!-- /hero__media-wrap -->
+
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <p class="section__label text-center">NAVER REVIEW</p>
+      <h2 class="section__title text-center">학부모님들의<br />생생한 후기</h2>
+      <p class="section__sub text-center">네이버 지도 실제 방문 후기입니다</p>
+
+      <div class="reviews__grid">
+
+        <div class="review-card">
+          <div class="review-card__header">
+            <div class="review-card__stars">★★★★★</div>
+            <span class="review-card__badge">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="#03C75A"><path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z"/></svg>
+              네이버
+            </span>
+          </div>
+          <p class="review-card__text">아이 체력이 걱정되어 강재영줄넘기학교에 등록했는데, 예상보다 훨씬 좋아해서 다행이에요. 아이들 눈높이에 맞춰 세심하게 지도해주시니 운동을 어려워하던 아이도 금방 재미를 붙이더라고요. 줄넘기 실력뿐만 아니라 자신감까지 부쩍 늘어난 것 같아 만족스럽네요.</p>
+          <p class="review-card__author">top****</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__header">
+            <div class="review-card__stars">★★★★★</div>
+            <span class="review-card__badge">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="#03C75A"><path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z"/></svg>
+              네이버
+            </span>
+          </div>
+          <p class="review-card__text">아이의 체력과 자신감을 위해 고민하다가, 파주에서 입소문 난 강재영 줄넘기학교에 다녀왔습니다. 직접 경험해 보니 왜 많은 부모님이 추천하시는지 알 것 같아 진심 어린 후기를 공유합니다.</p>
+          <p class="review-card__author">Pro77789</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__header">
+            <div class="review-card__stars">★★★★★</div>
+            <span class="review-card__badge">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="#03C75A"><path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z"/></svg>
+              네이버
+            </span>
+          </div>
+          <p class="review-card__text">운동 싫어하는 우리 아이가 유일하게 즐겁게 다니는 곳이에요. 친절하시고, 아이들 눈높이에서 재미있게 지도해주셔서 그런지 금방 적응하더라고요. 파주 지역에서 줄넘기 제대로 배울 곳 찾으시면 강재영줄넘기학교 강력 추천합니다.</p>
+          <p class="review-card__author">sun****</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__header">
+            <div class="review-card__stars">★★★★★</div>
+            <span class="review-card__badge">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="#03C75A"><path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z"/></svg>
+              네이버
+            </span>
+          </div>
+          <p class="review-card__text">땀 흘리는 거 질색하던 아이였는데, 강재영 줄넘기학교 다니고 나서부터는 운동에 재미를 붙였어요. 다양한 기술을 단계별로 배우니까 성취감이 엄청난 것 같아요. 파주에서 줄넘기 학원 고민하시면 강재영줄넘기학교 추천합니다.</p>
+          <p class="review-card__author">까망킴뉴</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__header">
+            <div class="review-card__stars">★★★★★</div>
+            <span class="review-card__badge">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="#03C75A"><path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z"/></svg>
+              네이버
+            </span>
+          </div>
+          <p class="review-card__text">키가 작아 고민하다 시작했는데 땀 뻘뻘 흘리며 운동하고 오니 밥도 잘 먹고 잠도 푹 자요. 관장님이 아이들을 진심으로 예뻐해 주시는 게 느껴져서 늘 감사해요.</p>
+          <p class="review-card__author">kmh****</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__header">
+            <div class="review-card__stars">★★★★★</div>
+            <span class="review-card__badge">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="#03C75A"><path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z"/></svg>
+              네이버
+            </span>
+          </div>
+          <p class="review-card__text">아이 체력 기르기에 줄넘기가 좋다고 해서 체험해 봤는데, 예상보다 훨씬 전문적이라 등록하고 왔습니다. 열정적인 지도 덕분에 아이도 금방 흥미를 붙였습니다. 꾸준히 보내면 키 성장과 건강에 큰 도움 될 것 같아요.</p>
+          <p class="review-card__author">빵빠레191</p>
+        </div>
+
+      </div>
+
+      <div class="reviews__cta">
+        <a href="https://map.naver.com/p/entry/place/38349561" target="_blank" rel="noopener" class="btn btn--naver">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z"/></svg>
+          네이버 리뷰 전체 보기
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- YOUTUBE SECTION -->
+  <section class="yt-section">
+    <div class="container yt-section__inner">
+      <div class="yt-section__text">
+        <p class="section__label">YOUTUBE</p>
+        <h2 class="section__title">유튜브 채널에서<br />실력을 확인하세요</h2>
+        <p class="yt-section__desc">
+          강재영 줄넘기 학교 선수들의 대회 영상과 수업 장면을 직접 확인해보세요.
+        </p>
+        <a href="https://youtube.com/channel/UCcO8JWeOy2PZnRC-xPUEQ7w?si=71_mc7YApU7IHTAn"
+           target="_blank" rel="noopener" class="btn btn--youtube">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          유튜브 채널 방문하기
+        </a>
+      </div>
+      <div class="yt-section__frame">
+        <iframe
+          src="https://www.youtube.com/embed/6_LcvySkqA0"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="강재영 줄넘기 학교 대표 영상">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container about__grid">
+      <div class="about__image-wrap">
+        <img src="images/building-exterior.jpeg" alt="강재영줄넘기학교 건물 외관" class="about__image" />
+      </div>
+      <div class="about__text">
+        <p class="section__label">ABOUT US</p>
+        <h2 class="section__title">강재영 줄넘기 학교를<br />소개합니다</h2>
+        <p class="about__desc">
+          강재영 줄넘기 학교는 유치부부터 선수부까지, 단계별 체계적인 줄넘기 교육을 통해
+          아이들이 신체적·정신적으로 건강하게 성장할 수 있도록 돕는 전문 체육교육 기관입니다.
+        </p>
+        <p class="about__desc">
+          인성교육과 예절교육을 기본으로 하고, 키 성장 프로그램과 다양한 대회 참가 경험을 통해
+          아이들의 잠재력을 최대한 이끌어냅니다.
+        </p>
+        <div class="about__stats">
+          <div class="stat">
+            <div class="stat__icon stat__icon--red">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="stat__num">4</span>
+            <span class="stat__label">수업 과정</span>
+          </div>
+          <div class="stat">
+            <div class="stat__icon stat__icon--blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+              </svg>
+            </div>
+            <span class="stat__num">1급</span>
+            <span class="stat__label">지도자 자격</span>
+          </div>
+          <div class="stat">
+            <div class="stat__icon stat__icon--red">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/>
+              </svg>
+            </div>
+            <span class="stat__num">다수</span>
+            <span class="stat__label">대회 수상</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section features" id="features">
+    <div class="container">
+      <p class="section__label text-center">WHY US</p>
+      <h2 class="section__title text-center">강재영 줄넘기 학교만의<br />특별한 이유</h2>
+      <div class="features__grid">
+
+        <div class="feature-card">
+          <div class="feature-card__num">01</div>
+          <div class="feature-card__icon feature-card__icon--red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <h3>스피드 선수반 운영</h3>
+          <p>초·중등으로 구성된 스피드 선수반을 운영하며, 전국 대회를 목표로 하는 아이들을 전문적으로 지도합니다.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__num">02</div>
+          <div class="feature-card__icon feature-card__icon--blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>차별화된 성장 프로그램</h3>
+          <p>아이들이 즐겁게 활동하며 신체적·정신적으로 건강하게 성장할 수 있는 차별화된 커리큘럼을 제공합니다.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__num">03</div>
+          <div class="feature-card__icon feature-card__icon--red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>인성·예절·키 성장 교육</h3>
+          <p>인성교육과 예절교육을 기본으로 하며, 키 크기 체조와 키 성장 프로그램을 함께 접목하고 있습니다.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__num">04</div>
+          <div class="feature-card__icon feature-card__icon--blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+            </svg>
+          </div>
+          <h3>실력으로 증명하는 지도진</h3>
+          <p>다양한 줄넘기 대회에 참가하여 우수한 성적을 거두고 있는 검증된 교육 기관입니다.</p>
+        </div>
+
+        <div class="feature-card feature-card--wide">
+          <div class="feature-card__num">05</div>
+          <div class="feature-card__icon feature-card__icon--red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>남·여 선생님이 함께하는 세심한 케어</h3>
+            <p>남자 선생님과 여자 선생님이 함께 지도하여 아이들이 보다 편안하고 세심한 케어를 받을 수 있습니다.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section class="section programs" id="programs">
+    <div class="container">
+      <p class="section__label text-center">PROGRAMS</p>
+      <h2 class="section__title text-center">수업 프로그램</h2>
+      <p class="section__sub text-center">유치부부터 선수부까지, 단계별 맞춤 교육</p>
+      <div class="programs__grid">
+
+        <div class="program-card">
+          <div class="program-card__top program-card__top--1">
+            <span class="program-card__step">STEP 1</span>
+            <h3>유치부</h3>
+          </div>
+          <div class="program-card__body">
+            <p>줄넘기와 처음 만나는 시간. 기초 체력과 리듬감을 키웁니다.</p>
+            <ul>
+              <li>기본 줄넘기 동작 익히기</li>
+              <li>신체 협응력 발달</li>
+              <li>즐거운 운동 습관 형성</li>
+            </ul>
+          </div>
+          <a href="tel:031-949-8253" class="program-card__cta">수강 상담하기 →</a>
+        </div>
+
+        <div class="program-card">
+          <div class="program-card__top program-card__top--2">
+            <span class="program-card__step">STEP 2</span>
+            <h3>초등부</h3>
+          </div>
+          <div class="program-card__body">
+            <p>기초에서 심화까지, 체계적인 기술 향상 과정.</p>
+            <ul>
+              <li>다양한 줄넘기 기술 습득</li>
+              <li>체력·지구력 강화</li>
+              <li>대회 입문 기초 준비</li>
+            </ul>
+          </div>
+          <a href="tel:031-949-8253" class="program-card__cta">수강 상담하기 →</a>
+        </div>
+
+        <div class="program-card">
+          <div class="program-card__top program-card__top--3">
+            <span class="program-card__step">STEP 3</span>
+            <h3>중등부</h3>
+          </div>
+          <div class="program-card__body">
+            <p>실력을 한 단계 높이는 과정. 심화 기술과 체력을 완성합니다.</p>
+            <ul>
+              <li>고급 줄넘기 기술 완성</li>
+              <li>경기력 향상 훈련</li>
+              <li>대회 참가 경험 확대</li>
+            </ul>
+          </div>
+          <a href="tel:031-949-8253" class="program-card__cta">수강 상담하기 →</a>
+        </div>
+
+        <div class="program-card program-card--featured">
+          <div class="program-card__top program-card__top--4">
+            <span class="program-card__step">ELITE</span>
+            <h3>선수부 <span class="tag">스피드</span></h3>
+          </div>
+          <div class="program-card__body">
+            <p>초·중등 스피드 선수반. 전국 대회를 목표로 전문 훈련.</p>
+            <ul>
+              <li>스피드 전문 기술 훈련</li>
+              <li>대회 전략 및 멘탈 코칭</li>
+              <li>전국 대회 참가 지원</li>
+            </ul>
+          </div>
+          <a href="tel:031-949-8253" class="program-card__cta">수강 상담하기 →</a>
+        </div>
+
+      </div>
+      <p class="programs__note">※ 수강료는 상담을 통해 안내드립니다 &nbsp;·&nbsp; 시간표는 추후 업데이트 예정</p>
+    </div>
+  </section>
+
+  <!-- COACH -->
+  <section class="section coach" id="coach">
+    <div class="container coach__inner">
+      <div class="coach__image-wrap">
+        <img src="images/coach-profile.png" alt="강재영 원장" class="coach__image" />
+      </div>
+      <div class="coach__text">
+        <p class="section__label">COACH</p>
+        <h2 class="section__title">강재영 원장</h2>
+        <p class="coach__desc">
+          체육 전문가로서 쌓은 깊은 경험과 열정으로,
+          아이들 하나하나의 가능성을 이끌어냅니다.
+        </p>
+        <ul class="coach__careers">
+          <li>
+            <span class="career-dot career-dot--red"></span>
+            줄넘기 1급 지도자 · 1급 강사 · 1급 심판
+          </li>
+          <li>
+            <span class="career-dot career-dot--blue"></span>
+            경기 1급 지도사 (태권도)
+          </li>
+          <li>
+            <span class="career-dot"></span>
+            광주체육고등학교 졸업
+          </li>
+          <li>
+            <span class="career-dot"></span>
+            경희대학교 체육대학
+          </li>
+          <li>
+            <span class="career-dot"></span>
+            경희대학교 교육대학원 체육교육
+          </li>
+          <li>
+            <span class="career-dot career-dot--blue"></span>
+            현 운정5동 주민자치위원
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container contact__grid">
+      <div class="contact__info">
+        <p class="section__label">CONTACT</p>
+        <h2 class="section__title">오시는 길</h2>
+
+        <div class="info-block">
+          <div class="info-row">
+            <div class="info-icon-wrap info-icon-wrap--red">📍</div>
+            <div>
+              <strong>주소</strong>
+              <p>경기도 파주시 동패동 1694-2<br />교하일번가 빌딩 301호<br /><small>(스타벅스 교하점 빌딩 내)</small></p>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon-wrap info-icon-wrap--blue">📞</div>
+            <div>
+              <strong>전화</strong>
+              <p><a href="tel:031-949-8253">031-949-8253</a></p>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon-wrap info-icon-wrap--red">▶</div>
+            <div>
+              <strong>유튜브</strong>
+              <p><a href="https://youtube.com/channel/UCcO8JWeOy2PZnRC-xPUEQ7w?si=71_mc7YApU7IHTAn" target="_blank" rel="noopener">강재영 줄넘기 학교 채널 →</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hours">
+          <h3>운영 시간</h3>
+          <table class="hours__table">
+            <tbody>
+              <tr><td>월</td><td>13:30 – 21:00</td><td class="open-badge">운영</td></tr>
+              <tr><td>화</td><td>13:30 – 21:00</td><td class="open-badge">운영</td></tr>
+              <tr><td>수</td><td>13:30 – 21:00</td><td class="open-badge">운영</td></tr>
+              <tr><td>목</td><td>13:30 – 21:00</td><td class="open-badge">운영</td></tr>
+              <tr><td>금</td><td>13:30 – 21:00</td><td class="open-badge">운영</td></tr>
+              <tr class="closed"><td>토</td><td>정기 휴무</td><td class="closed-badge">휴무</td></tr>
+              <tr class="closed"><td>일</td><td>정기 휴무</td><td class="closed-badge">휴무</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="contact__map">
+        <iframe
+          src="https://maps.google.com/maps?q=경기도+파주시+동패동+1694-2&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="강재영 줄넘기 학교 위치">
+        </iframe>
+        <div class="map__overlay">
+          <p>📍 파주시 동패동 교하일번가 빌딩 301호</p>
+          <a href="https://map.naver.com/p/entry/place/38349561" target="_blank" rel="noopener" class="btn btn--primary btn--sm">네이버지도로 보기</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container cta-banner__inner">
+      <div class="cta-banner__text">
+        <h2>지금 바로 상담받으세요!</h2>
+        <p>수강료 및 시간표는 전화 상담을 통해 안내드립니다.</p>
+      </div>
+      <a href="tel:031-949-8253" class="btn btn--white-red">📞 031-949-8253</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="logo">
+          <img src="logo.png" alt="강재영줄넘기학교" class="logo__img logo__img--footer" />
+        </a>
+        <p>빠르게! 더 빠르게! 더더 빠르게!</p>
+      </div>
+      <div class="footer__info">
+        <p>경기도 파주시 동패동 1694-2 교하일번가 빌딩 301호</p>
+        <p>TEL: 031-949-8253</p>
+        <p>월–금 13:30 – 21:00 &nbsp;·&nbsp; 토·일 정기 휴무</p>
+      </div>
+      <div class="footer__social">
+        <a href="https://youtube.com/channel/UCcO8JWeOy2PZnRC-xPUEQ7w?si=71_mc7YApU7IHTAn"
+           target="_blank" rel="noopener" class="social-btn social-btn--youtube">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          YouTube
+        </a>
+      </div>
+    </div>
+    <div class="footer__copy">
+      <div class="container">
+        <p>© 2026 강재영 줄넘기 학교. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

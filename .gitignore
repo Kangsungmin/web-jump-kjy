@@ -1,0 +1,10 @@
+# 민감정보
+.env
+config.js
+
+# macOS
+.DS_Store
+
+# 에디터
+.vscode/
+.idea/
