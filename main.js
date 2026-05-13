@@ -86,6 +86,29 @@ if (total > 0) {
   startAuto();
 }
 
+// ── Award popup ───────────────────────────────────────
+(function () {
+  const popup    = document.getElementById('awardPopup');
+  const backdrop = document.getElementById('awardBackdrop');
+  const closeBtn = document.getElementById('awardCloseBtn');
+  const skipBtn  = document.getElementById('awardSkipBtn');
+  const KEY      = 'award_popup_hidden';
+  const today    = new Date().toISOString().slice(0, 10);
+
+  if (localStorage.getItem(KEY) !== today) {
+    popup.classList.add('active');
+  }
+
+  function close() { popup.classList.remove('active'); }
+
+  closeBtn.addEventListener('click', close);
+  backdrop.addEventListener('click', close);
+  skipBtn.addEventListener('click', () => {
+    localStorage.setItem(KEY, today);
+    close();
+  });
+})();
+
 // ── Scroll fade-in ────────────────────────────────────
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

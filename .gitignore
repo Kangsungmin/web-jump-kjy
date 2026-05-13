@@ -1,6 +1,7 @@
 # 민감정보
 .env
 config.js
+.info/
 
 # macOS
 .DS_Store
