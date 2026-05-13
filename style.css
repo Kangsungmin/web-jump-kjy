@@ -797,6 +797,12 @@ ul { list-style: none; }
 .program-card__top--2 { background: linear-gradient(135deg, #4facfe, #003478); }
 .program-card__top--3 { background: linear-gradient(135deg, #43e97b, #0052B4); }
 .program-card__top--4 { background: linear-gradient(135deg, var(--red), var(--blue)); }
+.program-card__top--5 { background: linear-gradient(135deg, #7c3aed, #4338ca); }
+
+/* 수행평가 카드: 5번째 카드를 4-col 그리드 중앙 2칸에 배치 */
+.program-card--eval {
+  grid-column: 2 / 4;
+}
 
 .program-card__body {
   padding: 20px;
@@ -1239,6 +1245,7 @@ ul { list-style: none; }
   .yt-section__inner { grid-template-columns: 1fr; gap: 40px; }
   .about__grid { gap: 48px; }
   .programs__grid { grid-template-columns: repeat(2, 1fr); }
+  .program-card--eval { grid-column: span 2; }
   .coach__inner { grid-template-columns: 1fr 1fr; gap: 48px; }
   .contact__grid { grid-template-columns: 1fr; }
   .contact__map { height: 360px; }
@@ -1307,6 +1314,7 @@ ul { list-style: none; }
 
 @media (max-width: 540px) {
   .programs__grid { grid-template-columns: 1fr; }
+  .program-card--eval { grid-column: span 1; }
   .about__grid { grid-template-columns: 1fr; }
   .reviews__grid { grid-template-columns: 1fr; }
 
